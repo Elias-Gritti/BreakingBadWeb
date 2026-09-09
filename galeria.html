@@ -28,25 +28,50 @@
 	</header>
 
 	<main class="page-shell">
-		<section class="content-section">
+		<section class="content-section gallery-section">
 			<div class="section-heading">
 				<p class="section-label">Galería</p>
-				<h2>Imágenes<br><em>de un mundo oscuro</em></h2>
+				<h2>Imágenes icónicas<br><em>de la serie</em></h2>
 			</div>
-			<div class="story-grid">
-				<div>
-					<p><strong>La estética de la serie</strong> mezcla laboratorio, desierto, tensión silenciosa y una paleta visual que se vuelve parte del relato.</p>
-					<p><strong>Cada imagen cuenta una historia:</strong> la química, la violencia, la vigilancia y la soledad del camino elegido aparecen en los espacios que recorren Walter y Jesse.</p>
-					<p><strong>La galería reúne momentos y símbolos</strong> que ayudan a recordar cómo la fotografía, los colores y los escenarios construyen la identidad de Breaking Bad.</p>
-				</div>
-				<div class="stats-box">
-					<div><strong>4</strong><span>Fotos</span></div>
-					<div><strong>1</strong><span>Estilo</span></div>
-					<div><strong>∞</strong><span>Recuerdos</span></div>
-				</div>
+			<p class="gallery-intro"><strong>La estética de Breaking Bad</strong> mezcla laboratorio, desierto, tensión silenciosa y una paleta visual que se vuelve parte del relato. Explorá el mosaico y abrí cada imagen para verla en detalle.</p>
+			<div class="gallery-grid" aria-label="Mosaico de imágenes icónicas">
+				<button class="gallery-item gallery-item-wide" type="button" data-index="0">
+					<img src="img/Galery/Galery01.jfif" alt="Walter White en el desierto" loading="lazy">
+				</button>
+				<button class="gallery-item gallery-item-tall" type="button" data-index="1">
+					<img src="img/Galery/Galery 02.jfif" alt="El laboratorio de Breaking Bad" loading="lazy">
+				</button>
+				<button class="gallery-item" type="button" data-index="2">
+					<img src="img/Galery/Glaery03.jfif" alt="Heisenberg" loading="lazy">
+				</button>
+				<button class="gallery-item" type="button" data-index="3">
+					<img src="img/Galery/Galery04.jfif" alt="El desierto en Breaking Bad" loading="lazy">
+				</button>
+				<button class="gallery-item gallery-item-wide" type="button" data-index="4">
+					<img src="img/Galery/Glaery05.jfif" alt="Jesse Pinkman" loading="lazy">
+				</button>
+				<button class="gallery-item" type="button" data-index="5">
+					<img src="img/Galery/Galery06.jfif" alt="Escena de tensión de la serie" loading="lazy">
+				</button>
+				<button class="gallery-item gallery-item-tall" type="button" data-index="6">
+					<img src="img/Galery/Galery07.jfif" alt="El camino en el desierto" loading="lazy">
+				</button>
+				<button class="gallery-item" type="button" data-index="7">
+					<img src="img/Galery/descargar.jfif" alt="Imagen icónica de Breaking Bad" loading="lazy">
+				</button>
 			</div>
 		</section>
 	</main>
+
+	<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+		<button class="lightbox-close" type="button" aria-label="Cerrar imagen"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+		<button class="lightbox-control lightbox-prev" type="button" aria-label="Imagen anterior"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+		<figure class="lightbox-figure">
+			<img id="lightbox-image" src="" alt="">
+			<figcaption id="lightbox-title"></figcaption>
+		</figure>
+		<button class="lightbox-control lightbox-next" type="button" aria-label="Imagen siguiente"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+	</div>
 
 	<footer class="site-footer">
 		<div class="footer-brand"><a class="brand" href="index.html"><img class="brand-mark" src="img/Breaking Bad Favicon.jfif" alt="Breaking Bad icono"><span>BREAKING BAD</span></a><p>Un sitio homenaje para quienes recuerdan que todo empezó con la química.</p></div>
@@ -54,5 +79,6 @@
 		<div class="footer-social"><p class="footer-title">Seguinos</p><div class="social-links"><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a href="https://x.com/" aria-label="X" target="_blank" rel="noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a><a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></div></div>
 		<small>© 2026 · Fan site no oficial</small>
 	</footer>
+	<script src="js/galeria.js"></script>
 </body>
 </html>
