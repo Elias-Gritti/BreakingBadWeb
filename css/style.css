@@ -93,7 +93,7 @@ img { max-width: 100%; display: block; }
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: url("../img/logo gif.gif") center/cover no-repeat;
+	background: url("../img/Breaking Bad Logo.jfif") center/cover no-repeat;
 	opacity: .45;
 	mix-blend-mode: screen;
 }
@@ -333,6 +333,7 @@ em { color: var(--acid); font-style: normal; }
 	display: grid;
 	grid-template-rows: 0fr;
 	overflow: hidden;
+	scroll-margin-top: 110px;
 	transition: grid-template-rows .45s ease;
 }
 .season-panel.is-open {
@@ -340,12 +341,13 @@ em { color: var(--acid); font-style: normal; }
 }
 .season-panel-content {
 	min-height: 0;
+	width: 100%;
 }
 .season-entry {
 	padding: 28px;
 	background: rgba(24, 42, 34, .72);
 	border: 1px solid var(--line);
-	margin-bottom: 16px;
+	margin: 0;
 }
 .season-entry:hover {
 	border-color: var(--acid);
