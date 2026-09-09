@@ -309,37 +309,47 @@ em { color: var(--acid); font-style: normal; }
 	gap: 12px;
 	margin: 42px 0 28px;
 }
-.season-nav a {
+.season-tab {
+	font-family: inherit;
 	padding: 13px 16px;
 	border: 1px solid var(--line);
+	background: transparent;
 	color: var(--muted);
 	font-size: 11px;
 	font-weight: 700;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	cursor: pointer;
 	transition: .22s ease;
 }
-.season-nav a:hover,
-.season-nav a:focus-visible {
+.season-tab:hover,
+.season-tab:focus-visible,
+.season-tab.active {
 	border-color: var(--acid);
 	background: var(--acid);
 	color: var(--ink);
 }
-.season-list {
+.season-panel {
 	display: grid;
-	gap: 16px;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows .45s ease;
+}
+.season-panel.is-open {
+	grid-template-rows: 1fr;
+}
+.season-panel-content {
+	min-height: 0;
 }
 .season-entry {
 	padding: 28px;
 	background: rgba(24, 42, 34, .72);
 	border: 1px solid var(--line);
-	scroll-margin-top: 110px;
-	transition: border-color .22s ease, background .22s ease, transform .22s ease;
+	margin-bottom: 16px;
 }
 .season-entry:hover {
 	border-color: var(--acid);
 	background: rgba(35, 57, 43, .88);
-	transform: translateY(-2px);
 }
 .season-entry h3 {
 	margin: 10px 0 12px;
@@ -350,6 +360,37 @@ em { color: var(--acid); font-style: normal; }
 	margin: 0;
 	color: var(--muted);
 	line-height: 1.8;
+}
+.episode-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	margin-top: 28px;
+}
+.episode-card {
+	padding: 18px;
+	background: rgba(13, 18, 15, .42);
+	border-left: 2px solid rgba(181, 211, 52, .35);
+}
+.episode-card span {
+	color: var(--acid);
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+.episode-card h4 {
+	margin: 9px 0 7px;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 25px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+.episode-card p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 12px;
+	line-height: 1.6;
 }
 .character-grid {
 	display: grid;
@@ -458,6 +499,7 @@ em { color: var(--acid); font-style: normal; }
 	.world-grid { grid-template-columns: 1fr; }
 	.site-footer { grid-template-columns: 1fr 1fr; }
 	.site-footer small { grid-column: 1 / -1; }
+	.episode-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
