@@ -34,7 +34,7 @@
         <div class="home-title-row">
           <img class="home-title-logo" src="img/Breaking Bad Logo.jfif" alt="Logo de Breaking Bad">
           <div>
-            <h1><span class="home-title-line home-title-accent">La transformación</span><span class="home-title-line">De Walter White a <span>Heisenberg</span></span></h1>
+            <h1><span class="home-title-line home-title-accent">99,1% de pureza</span><span class="home-title-line">100% de <span>problemas</span></span></h1>
           </div>
         </div>
       </div>
@@ -60,6 +60,57 @@
       <div class="quote-box home-quote" aria-live="polite">
         <p id="quote-text">"I am the one who knocks."</p>
         <button class="button button-outline" id="quote-button" type="button">Otra frase <span aria-hidden="true">↗</span></button>
+      </div>
+
+      <div class="quiz-box" id="character-quiz">
+        <div class="quiz-heading">
+          <p class="section-label">Test de pureza</p>
+          <h2>¿Qué personaje<br><em>sos?</em></h2>
+          <p>Contestá cinco preguntas y descubrí con quién compartís más química.</p>
+        </div>
+        <form id="quiz-form">
+          <fieldset class="quiz-question is-active">
+            <legend>01. Te invitan a cocinar en el laboratorio. Vos...</legend>
+            <label><input type="radio" name="q1" value="Walter"> Aceptás: nadie supera tu receta</label>
+            <label><input type="radio" name="q1" value="Jesse"> Preguntás si hay música y algo para comer</label>
+            <label><input type="radio" name="q1" value="Skyler"> Querés saber primero quién está involucrado</label>
+            <label><input type="radio" name="q1" value="Gus"> Llegás puntual, impecable y con todo calculado</label>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>02. La policía está cerca. Tu reacción es...</legend>
+            <label><input type="radio" name="q2" value="Walter"> Improvisar una explicación brillante</label>
+            <label><input type="radio" name="q2" value="Jesse"> Entrar en pánico y decir “¡correr!”</label>
+            <label><input type="radio" name="q2" value="Saul"> Llamar a tu abogado de confianza</label>
+            <label><input type="radio" name="q2" value="Mike"> Revisar la salida más segura</label>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>03. Tu socio se manda una importante. Vos...</legend>
+            <label><input type="radio" name="q3" value="Walter"> Le explicás exactamente dónde se equivocó</label>
+            <label><input type="radio" name="q3" value="Jesse"> Te enojás, pero igual lo bancás</label>
+            <label><input type="radio" name="q3" value="Skyler"> Le exigís que diga toda la verdad</label>
+            <label><input type="radio" name="q3" value="Mike"> Decís “no más medias tintas” y actuás</label>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>04. Elegí tu frase para entrar en escena...</legend>
+            <label><input type="radio" name="q4" value="Walter"> “Say my name.”</label>
+            <label><input type="radio" name="q4" value="Jesse"> “Yeah, science!”</label>
+            <label><input type="radio" name="q4" value="Saul"> “Better call Saul.”</label>
+            <label><input type="radio" name="q4" value="Gus"> “I am the one who knocks.”</label>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>05. ¿Qué no puede faltar en tu día?</legend>
+            <label><input type="radio" name="q5" value="Walter"> Un desafío digno de mi inteligencia</label>
+            <label><input type="radio" name="q5" value="Jesse"> Un amigo que no me deje solo</label>
+            <label><input type="radio" name="q5" value="Skyler"> Tener todo bajo control en casa</label>
+            <label><input type="radio" name="q5" value="Mike"> Un café y cero sorpresas</label>
+          </fieldset>
+        </form>
+        <p class="quiz-progress" id="quiz-progress">Pregunta 1 de 5</p>
+        <div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div>
       </div>
     </section>
 

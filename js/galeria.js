@@ -13,7 +13,7 @@ function updateLightbox() {
 	const selectedItem = galleryItems[currentImage];
 	const image = selectedItem.querySelector("img");
 
-	lightboxImage.src = image.src;
+	lightboxImage.src = image.currentSrc || image.src;
 	lightboxImage.alt = image.alt;
 	lightboxTitle.textContent = `Imagen ${currentImage + 1} de ${galleryItems.length}`;
 }

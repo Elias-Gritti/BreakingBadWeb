@@ -28,10 +28,10 @@
 	</header>
 
 	<main class="page-shell">
-		<section class="content-section">
+		<section class="content-section contact-intro-section">
 			<div class="section-heading">
 				<p class="section-label">Contacto</p>
-				<h2>Habla con<br><em>la familia</em></h2>
+				<h2>Say my name<br><em>y dejá tu mensaje</em></h2>
 			</div>
 			<div class="story-grid">
 				<div>
@@ -39,12 +39,40 @@
 					<p><strong>Podés compartir una sugerencia</strong>, recomendar una escena o proponer información para ampliar las secciones dedicadas a personajes, temporadas y galería.</p>
 					<p><strong>También podés seguir explorando</strong> el universo de la serie desde el menú principal y volver al inicio para descubrir una nueva frase icónica.</p>
 				</div>
-				<div class="stats-box">
+				<div class="stats-box contact-stats">
 					<div><strong>Mail</strong><span>fan@bbweb.com</span></div>
 					<div><strong>Redes</strong><span>@breakingbad</span></div>
-					<div><strong>Estado</strong><span>online</span></div>
 				</div>
 			</div>
+		</section>
+
+		<section class="content-section contact-form-section">
+			<div class="section-heading">
+				<p class="section-label">Línea directa</p>
+				<h2>Decime algo<br><em>que no sea química</em></h2>
+			</div>
+			<form class="contact-form" action="#" method="post">
+				<div class="form-fields">
+					<label for="name">Tu nombre o alias de laboratorio</label>
+					<input id="name" name="name" type="text" placeholder="Walter... o Heisenberg" required>
+
+					<label for="email">Correo para que Saul te contacte</label>
+					<input id="email" name="email" type="email" placeholder="tu correo@bbweb.com" required>
+
+					<label for="subject">¿Qué se cocina?</label>
+					<select id="subject" name="subject" required>
+						<option value="" selected disabled>Elegí un motivo</option>
+						<option value="theory">Tengo una teoría más pura que la química</option>
+						<option value="scene">Quiero recomendar una escena de alto impacto</option>
+						<option value="quote">Vengo con una frase que deja huella</option>
+						<option value="other">Necesito un buen abogado</option>
+					</select>
+
+					<label for="message">Tu mensaje</label>
+					<textarea id="message" name="message" rows="6" placeholder="Sin spoilers... o con ellos, vos decidís." required></textarea>
+				</div>
+				<button class="button button-primary" type="submit">Cocinar mensaje <span aria-hidden="true">↗</span></button>
+			</form>
 		</section>
 	</main>
 
