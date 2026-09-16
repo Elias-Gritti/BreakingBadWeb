@@ -272,7 +272,7 @@ h2 {
 }
 .home-quote {
 	max-width: 720px;
-	margin-top: 54px;
+	margin: 54px auto 0;
 }
 .home-quote p {
 	margin-bottom: 22px;
@@ -380,6 +380,20 @@ h2 {
 }
 em { color: var(--acid); font-style: normal; }
 .home-world, .home-explore { padding-left: 38px; padding-right: 38px; }
+.home-world .section-heading {
+	display: block;
+	text-align: center;
+}
+.home-world .section-label {
+	justify-content: center;
+}
+.home-explore .section-heading {
+	display: block;
+	text-align: center;
+}
+.home-explore .section-label {
+	justify-content: center;
+}
 .world-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .world-card { min-height: 250px; padding: 26px; background: rgba(24, 42, 34, .7); border: 1px solid var(--line); transition: border-color .22s ease, transform .22s ease; }
 .world-card:hover { border-color: var(--acid); transform: translateY(-3px); }
