@@ -18,10 +18,24 @@
       <img class="brand-mark" src="img/Breaking Bad Favicon.jfif" alt="Breaking Bad icono">
       <span>BREAKING BAD</span>
     </a>
-    <nav class="main-nav" aria-label="Navegación principal">
+    <button class="main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
       <a class="active" href="index.html">Inicio</a>
       <a href="personajes.html">Personajes</a>
-      <a href="temporadas.html">Temporadas</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">Temporadas <span aria-hidden="true">⌄</span></button>
+        <div class="nav-submenu">
+          <a href="temporadas.html?temporada=1">Temporada 1</a>
+          <a href="temporadas.html?temporada=2">Temporada 2</a>
+          <a href="temporadas.html?temporada=3">Temporada 3</a>
+          <a href="temporadas.html?temporada=4">Temporada 4</a>
+          <a href="temporadas.html?temporada=5">Temporada 5</a>
+        </div>
+      </div>
       <a href="galeria.html">Galería</a>
       <a href="contacto.html">Contacto</a>
     </nav>

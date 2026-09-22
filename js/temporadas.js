@@ -140,5 +140,13 @@ seasonTabs.forEach((tab) => {
 	tab.addEventListener("click", () => selectSeason(tab));
 });
 
-renderSeason("1");
+const requestedSeason = new URLSearchParams(window.location.search).get("temporada");
+const initialTab = [...seasonTabs].find((tab) => tab.dataset.season === requestedSeason) || seasonTabs[0];
+
+renderSeason(initialTab.dataset.season);
+seasonTabs.forEach((tab) => {
+	const isActive = tab === initialTab;
+	tab.classList.toggle("active", isActive);
+	tab.setAttribute("aria-expanded", String(isActive));
+});
 window.requestAnimationFrame(() => seasonPanel?.classList.add("is-open"));

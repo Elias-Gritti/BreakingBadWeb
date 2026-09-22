@@ -1,3 +1,41 @@
+const navToggle = document.querySelector(".main-nav-toggle");
+const mainNav = document.querySelector(".main-nav");
+const dropdownToggles = document.querySelectorAll(".nav-dropdown-toggle");
+
+dropdownToggles.forEach((toggle) => {
+	 toggle.addEventListener("click", () => {
+		const dropdown = toggle.closest(".nav-dropdown");
+		const isOpen = dropdown.classList.toggle("is-open");
+		toggle.setAttribute("aria-expanded", String(isOpen));
+	});
+});
+
+document.addEventListener("click", (event) => {
+	dropdownToggles.forEach((toggle) => {
+		const dropdown = toggle.closest(".nav-dropdown");
+		if (!dropdown.contains(event.target)) {
+			dropdown.classList.remove("is-open");
+			toggle.setAttribute("aria-expanded", "false");
+		}
+	});
+});
+
+if (navToggle && mainNav) {
+	navToggle.addEventListener("click", () => {
+		const isOpen = mainNav.classList.toggle("is-open");
+		navToggle.setAttribute("aria-expanded", String(isOpen));
+	});
+
+	mainNav.querySelectorAll("a").forEach((link) => {
+		link.addEventListener("click", () => {
+			if (window.innerWidth <= 760) {
+				mainNav.classList.remove("is-open");
+				navToggle.setAttribute("aria-expanded", "false");
+			}
+		});
+	});
+}
+
 const quoteButton = document.querySelector("#quote-button");
 const quoteText = document.querySelector("#quote-text");
 
