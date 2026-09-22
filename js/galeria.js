@@ -2,6 +2,8 @@ const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = document.querySelector("#lightbox-image");
 const lightboxTitle = document.querySelector("#lightbox-title");
+const lightboxCounter = document.querySelector(".lightbox-counter");
+const lightboxDescription = document.querySelector(".lightbox-description");
 const closeButton = document.querySelector(".lightbox-close");
 const previousButton = document.querySelector(".lightbox-prev");
 const nextButton = document.querySelector(".lightbox-next");
@@ -15,7 +17,8 @@ function updateLightbox() {
 
 	lightboxImage.src = image.currentSrc || image.src;
 	lightboxImage.alt = image.alt;
-	lightboxTitle.textContent = `Imagen ${currentImage + 1} de ${galleryItems.length}`;
+	lightboxCounter.textContent = `Imagen ${currentImage + 1} de ${galleryItems.length} · ${image.alt}`;
+	lightboxDescription.textContent = selectedItem.dataset.description;
 }
 
 function openLightbox(index) {

@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/jfif" href="img/Breaking Bad Favicon.jfif">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-	<link rel="stylesheet" href="css/style.css?v=nav20260922">
+	<link rel="stylesheet" href="css/style.css?v=gallerydesc20260922">
 </head>
 <body>
 	<header class="site-header">
@@ -49,40 +49,40 @@
 			</div>
 			<p class="gallery-intro"><strong>La estética de Breaking Bad</strong> mezcla laboratorio, desierto, tensión silenciosa y una paleta visual que se vuelve parte del relato. Explorá el mosaico y abrí cada imagen para verla en detalle.</p>
 			<div class="gallery-grid" aria-label="Mosaico de imágenes icónicas">
-				<button class="gallery-item gallery-item-wide" type="button" data-index="0">
+				<button class="gallery-item gallery-item-wide" type="button" data-index="0" data-description="Walter contempla el desierto, el escenario donde su transformación comienza a tomar forma.">
 					<img src="img/Galery/Galery01.jfif" alt="Walter White en el desierto" width="735" height="498" fetchpriority="high" decoding="async">
 				</button>
-				<button class="gallery-item gallery-item-tall" type="button" data-index="1">
+				<button class="gallery-item gallery-item-tall" type="button" data-index="1" data-description="El laboratorio representa la precisión, el riesgo y la obsesión detrás del negocio.">
 					<img src="img/Galery/Galery 02.jfif" alt="El laboratorio de Breaking Bad" width="736" height="409" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item" type="button" data-index="2">
+				<button class="gallery-item" type="button" data-index="2" data-description="La imagen de Heisenberg resume la identidad que Walter construye lejos de su vida anterior.">
 					<img src="img/Galery/Glaery03.jfif" alt="Heisenberg" width="736" height="414" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item" type="button" data-index="3">
+				<button class="gallery-item" type="button" data-index="3" data-description="El desierto funciona como refugio, escondite y testigo de decisiones irreversibles.">
 					<img src="img/Galery/Galery04.jfif" alt="El desierto en Breaking Bad" width="736" height="736" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item gallery-item-wide" type="button" data-index="4">
+				<button class="gallery-item gallery-item-wide" type="button" data-index="4" data-description="Jesse atraviesa el conflicto intentando conservar su sensibilidad dentro de un mundo violento.">
 					<img src="img/Galery/Glaery05.webp" alt="Jesse Pinkman" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item" type="button" data-index="5">
+				<button class="gallery-item" type="button" data-index="5" data-description="La tensión de la serie nace cuando cada alianza puede convertirse en una amenaza.">
 					<img src="img/Galery/Galery06.jfif" alt="Escena de tensión de la serie" width="736" height="402" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item gallery-item-tall" type="button" data-index="6">
+				<button class="gallery-item gallery-item-tall" type="button" data-index="6" data-description="El camino abierto refleja la incertidumbre y el rumbo cada vez más peligroso de la historia.">
 					<img src="img/Galery/Galery07.jfif" alt="El camino en el desierto" width="736" height="414" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item gallery-item-wide" type="button" data-index="7">
+				<button class="gallery-item gallery-item-wide" type="button" data-index="7" data-description="Walter aparece en el centro de una etapa donde el poder empieza a cambiarlo por completo.">
 					<img src="img/Galery/Galery08.jfif" alt="Walter White en una escena de la serie" width="736" height="536" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item gallery-item-tall" type="button" data-index="8">
+				<button class="gallery-item gallery-item-tall" type="button" data-index="8" data-description="La noche acentúa el secreto y la tensión que rodean cada movimiento de los personajes.">
 					<img src="img/Galery/Galery09.webp" alt="Escena nocturna de Breaking Bad" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item" type="button" data-index="9">
+				<button class="gallery-item" type="button" data-index="9" data-description="Los personajes comparten un momento marcado por la complicidad y el peligro.">
 					<img src="img/Galery/Galery10.webp" alt="Personajes de Breaking Bad" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item" type="button" data-index="10">
+				<button class="gallery-item" type="button" data-index="10" data-description="El paisaje árido refuerza la soledad y la tensión constante de la serie.">
 					<img src="img/Galery/Galery11.jpg" alt="Paisaje de la serie" width="1000" height="563" loading="lazy" decoding="async">
 				</button>
-				<button class="gallery-item gallery-item-wide" type="button" data-index="11">
+				<button class="gallery-item gallery-item-wide" type="button" data-index="11" data-description="Una escena icónica que reúne la estética, el riesgo y las consecuencias de Breaking Bad.">
 					<img src="img/Galery/Galery12.webp" alt="Escena icónica de Breaking Bad" width="1280" height="720" loading="lazy" decoding="async">
 				</button>
 			</div>
@@ -94,7 +94,10 @@
 		<button class="lightbox-control lightbox-prev" type="button" aria-label="Imagen anterior"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
 		<figure class="lightbox-figure">
 			<img id="lightbox-image" src="" alt="">
-			<figcaption id="lightbox-title"></figcaption>
+			<figcaption id="lightbox-title">
+				<span class="lightbox-counter"></span>
+				<p class="lightbox-description"></p>
+			</figcaption>
 		</figure>
 		<button class="lightbox-control lightbox-next" type="button" aria-label="Imagen siguiente"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
 	</div>
@@ -105,7 +108,7 @@
 		<div class="footer-social"><p class="footer-title"><strong>Seguinos</strong></p><div class="social-links"><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a href="https://x.com/" aria-label="X" target="_blank" rel="noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a><a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></div></div>
 		<small>© 2026 · Fan site no oficial</small>
 	</footer>
-	<script src="js/base.js?v=nav20260922"></script>
-	<script src="js/galeria.js?v=nav20260922"></script>
+	<script src="js/base.js?v=gallerydesc20260922"></script>
+	<script src="js/galeria.js?v=gallerydesc20260922"></script>
 </body>
 </html>
