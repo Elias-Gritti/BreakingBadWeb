@@ -10,6 +10,8 @@ const nextButton = document.querySelector(".lightbox-next");
 
 let currentImage = 0;
 let lastFocusedItem;
+let touchStartX = 0;
+let touchStartY = 0;
 
 function updateLightbox() {
 	const selectedItem = galleryItems[currentImage];
@@ -51,6 +53,21 @@ nextButton.addEventListener("click", () => changeImage(1));
 
 lightbox.addEventListener("click", (event) => {
 	if (event.target === lightbox) closeLightbox();
+});
+
+lightbox.addEventListener("touchstart", (event) => {
+	const touch = event.changedTouches[0];
+	touchStartX = touch.clientX;
+	touchStartY = touch.clientY;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", (event) => {
+	const touch = event.changedTouches[0];
+	const horizontalDistance = touch.clientX - touchStartX;
+	const verticalDistance = touch.clientY - touchStartY;
+
+	if (Math.abs(horizontalDistance) < 50 || Math.abs(horizontalDistance) < Math.abs(verticalDistance)) return;
+	changeImage(horizontalDistance < 0 ? 1 : -1);
 });
 
 document.addEventListener("keydown", (event) => {
