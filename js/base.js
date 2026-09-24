@@ -3,7 +3,12 @@ const mainNav = document.querySelector(".main-nav");
 const dropdownToggles = document.querySelectorAll(".nav-dropdown-toggle");
 
 dropdownToggles.forEach((toggle) => {
-	 toggle.addEventListener("click", () => {
+	 toggle.addEventListener("click", (event) => {
+		if (!event.target.closest("span")) {
+			window.location.href = "temporadas.html?temporada=1";
+			return;
+		}
+
 		const dropdown = toggle.closest(".nav-dropdown");
 		const isOpen = dropdown.classList.toggle("is-open");
 		toggle.setAttribute("aria-expanded", String(isOpen));
