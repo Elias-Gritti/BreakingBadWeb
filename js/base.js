@@ -71,7 +71,7 @@ const characterDescriptions = {
 
 const characterImages = {
 	Walter: "img/Walter White.jfif",
-	Jesse: "img/JeseePínkman.jpg",
+	Jesse: "img/JeseePínkman.webp",
 	Skyler: "img/Skyler White.jfif",
 	Saul: "img/SaulGoodman.webp",
 	Mike: "img/Mike.jfif",

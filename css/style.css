@@ -25,6 +25,41 @@ body {
 	color: var(--paper);
 	overflow-x: hidden;
 }
+body.page-personajes,
+body.page-temporadas,
+body.page-galeria,
+body.page-contacto,
+body.page-home {
+	background-attachment: fixed;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+body.page-home {
+	background-image:
+		linear-gradient(rgba(12, 17, 15, .82), rgba(12, 17, 15, .94)),
+		url("../img/Fondo.jpg");
+}
+body.page-personajes {
+	background-image:
+		linear-gradient(rgba(12, 17, 15, .86), rgba(12, 17, 15, .94)),
+		url("../img/FondoPersonajes.webp");
+}
+body.page-temporadas {
+	background-image:
+		linear-gradient(rgba(12, 17, 15, .84), rgba(12, 17, 15, .95)),
+		url("../img/Fondo01.webp");
+}
+body.page-galeria {
+	background-image:
+		linear-gradient(rgba(12, 17, 15, .86), rgba(12, 17, 15, .94)),
+		url("../img/Fondo02.webp");
+}
+body.page-contacto {
+	background-image:
+		linear-gradient(rgba(12, 17, 15, .84), rgba(12, 17, 15, .95)),
+		url("../img/Fondo03.webp");
+}
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .site-header {
@@ -378,9 +413,10 @@ h2 {
 .home-intro {
 	position: relative;
 	overflow: hidden;
-	padding: 92px 38px 80px;
-	background: linear-gradient(135deg, rgba(19, 32, 25, .96), rgba(12, 17, 15, .96));
+	padding: 86px 38px 80px;
+	background: linear-gradient(90deg, rgba(12, 17, 15, .98) 0%, rgba(12, 17, 15, .84) 48%, rgba(12, 17, 15, .5) 100%);
 	border-bottom: 1px solid var(--line);
+	box-shadow: inset 0 -80px 90px rgba(12, 17, 15, .42);
 }
 .home-intro > * { position: relative; z-index: 1; }
 .home-intro .section-heading {
@@ -393,19 +429,19 @@ h2 {
 .home-title-row {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 36px;
-	width: fit-content;
-	max-width: 1120px;
-	margin: 0 auto;
+	justify-content: flex-start;
+	gap: 30px;
+	max-width: 980px;
+	margin: 0;
 }
 .home-title-row > div { min-width: 0; flex: 0 1 520px; }
 .home-title-logo {
-	width: min(420px, 40vw);
-	height: 240px;
-	object-fit: cover;
-	border: 1px solid var(--line);
+	width: min(300px, 30vw);
+	height: 170px;
+	object-fit: contain;
+	border: 0;
 	box-shadow: 0 18px 35px rgba(0, 0, 0, .3);
+	filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .4));
 }
 .home-title-row h1 {
 	color: var(--paper);
@@ -421,6 +457,26 @@ h2 {
 .home-title-accent,
 .home-title-line span {
 	color: var(--acid);
+}
+.home-intro .story-grid {
+	max-width: 980px;
+	margin-top: 42px;
+}
+.home-intro .story-grid > div:first-child {
+	max-width: 590px;
+}
+.home-intro .stats-box {
+	align-self: center;
+	background: rgba(13, 18, 15, .76);
+	border-color: rgba(220, 232, 186, .3);
+	box-shadow: 0 18px 35px rgba(0, 0, 0, .2);
+}
+.home-intro .stats-box strong {
+	font-size: clamp(36px, 4vw, 56px);
+}
+.home-intro .hero-actions {
+	max-width: 980px;
+	margin-top: 34px;
 }
 .home-quote {
 	width: 100%;
@@ -875,6 +931,7 @@ body.lightbox-open { overflow: hidden; }
 	text-transform: uppercase;
 }
 .lightbox-description {
+	display: none;
 	max-width: 680px;
 	margin: 8px auto 0;
 	color: var(--muted);
@@ -1010,6 +1067,11 @@ body.lightbox-open { overflow: hidden; }
 }
 
 @media (max-width: 760px) {
+	body.page-personajes,
+	body.page-temporadas,
+	body.page-galeria,
+	body.page-contacto,
+	body.page-home { background-attachment: scroll; }
 	.site-header {
 		position: relative;
 		padding: 18px 6vw;
@@ -1084,11 +1146,15 @@ body.lightbox-open { overflow: hidden; }
 	.page-shell { padding: 0 6vw 60px; }
 	.home-intro {
 		padding: 58px 18px 54px;
+		background: linear-gradient(180deg, rgba(12, 17, 15, .96) 0%, rgba(12, 17, 15, .88) 100%);
 	}
 	.home-title-row { flex-direction: column; align-items: center; gap: 18px; }
 	.home-title-row > div { flex: 0 1 auto; width: 100%; }
 	.home-intro .section-heading { margin-bottom: 18px; }
 	.home-title-logo { width: min(360px, 100%); height: auto; object-fit: contain; }
+	.home-intro .story-grid { margin-top: 28px; }
+	.home-intro .story-grid > div:first-child { max-width: none; }
+	.home-intro .hero-actions { margin-top: 26px; }
 	.hero { padding-top: 32px; }
 	.hero-logo { display: none; }
 	.hero-actions { flex-direction: column; align-items: flex-start; }
